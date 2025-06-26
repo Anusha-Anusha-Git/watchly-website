@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>BlogPage</title>
+    <meta name="author" content="Coursework">
+    <meta name="description" content="HTML document">
+    <meta name="keywords" content="HTML">
+    <style>
+        /* Basic styling for the body */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000000; /* Full black background */
+            color: #e0e0e0; /* Light grey text for better readability */
+        }
+
+        /* Styling for the header */
+        header {
+            background: #000000; /* Full black */
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Navigation links styling */
+        .navigationLinks {
+            background-color: transparent;
+            height: 50px;
+            width: 30%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin-top: 110px;
+        }
+
+        /* Link styling */
+        a:link, a:visited, a:active, a:focus {
+            text-decoration: none;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Hover effect for links */
+        a:hover {
+            color: lightgrey;
+        }
+
+        /* Button styling */
+        .Buttons {
+            transition: all 0.3s;
+        }
+
+        /* Hover effect for buttons */
+        .Buttons:hover {
+            transform: scale(1.10);
+        }
+
+        /* Blog container styling */
+        .blog-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+            gap: 20px; /* Adds spacing between cards */
+        }
+
+        /* Individual blog post styling */
+        .blog-post {
+            background: #1a1a1a00; /* Slightly lighter black for cards */
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; /* Ensures content stays within the card */
+        }
+
+        /* Hover effect for blog posts */
+        .blog-post:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Image styling within blog posts */
+        .blog-post img {
+            width: 100%;
+            height: 200px; /* Fixed height for uniformity */
+            object-fit: cover; /* Ensures images fit nicely */
+            border-radius: 10px 10px 0 0;
+        }
+
+        /* Content styling within blog posts */
+        .blog-post .content {
+            padding: 15px;
+            flex: 1; /* Ensures content takes up remaining space */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Aligns button at the bottom */
+        }
+
+        /* Learn More button styling */
+        .blog-post .learn-more-btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px; /* Consistent spacing */
+            transition: background-color 0.3s ease;
+        }
+
+        /* Hover effect for Learn More button */
+        .blog-post .learn-more-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Subscribe section styling */
+        .subscribe-section {
+            background: #1a1a1a; /* Slightly lighter black */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Input and button styling within subscribe section */
+        .subscribe-section input {
+            width: 80%;
+            max-width: 300px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #333333;
+            color: white;
+        }
+
+        .subscribe-section button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #007BFF;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .subscribe-section button:hover {
+            background: #0056b3;
+        }
+
+        /* Reply section styling */
+        .reply-section {
+            margin: 20px auto;
+            padding: 20px;
+            background: #1a1a1a00; /* Slightly lighter black */
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Input and textarea styling within reply section */
+        .reply-section input, .reply-section textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #33333300;
+            color: white;
+        }
+
+        /* Button styling within reply section */
+        .reply-section button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #007BFF;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Hover effect for buttons within reply section */
+        .reply-section button:hover {
+            background: #0056b3;
+        }
+
+        /* Footer styling */
+        footer {
+            background: #000000; /* Full black */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Social icons styling within footer */
+        footer .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        footer .social-icons a {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-icons a:hover {
+            color: #007BFF;
+        }
+    </style>
+      <script>
+        function showAlert() {
+            alert("Thank you for subscribing!");
+        }
+
+        function showCommentAlert() {
+            alert("Your comment has been posted!");
+        }
+    </script>
+    
+  
+</head>
+<body style="width: 100%; height: 100%;">
+   
+
+    <!--Main container-->
+ 
+        <nav style="position: absolute; margin-top: 70px; margin-left: 50px; ">
+            <ul style="list-style: none; display: flex; gap: 20px; ">
+                <li><span style="font-family: corporateA; text-decoration: none; font-size:20px;"><a href="../index.html">Home</span></a></li>
+                <li><span style="font-family: corporateA; text-decoration: none; font-size:20px;"><a href="product.html">Products</span></a></li>
+                <li><span style="font-family: corporateA; text-decoration: none; font-size:20px;"><a href="blog5.html">Blog</span></a></li>
+                <li><span style="font-family: corporateA; text-decoration: none; font-size:20px;"><a href="about.html">About</span></a></li>
+                <li><span style="font-family: corporateA; text-decoration: none; font-size:20px;"><a href="research.html">Research</span></a></li>
+            </ul>
+        </nav>
+
+        <header style="background-color: rgba(255, 0, 0, 0); position: absolute; height: 250px; width: 270px; margin-left: 680px;">
+            <img class="setLogo" src="../imgs/logo.png" style="height: 100%; width: 100%;">
+        </header>
+
+        <section class="blog-container" style="margin-top: 300px; background-color: #000000;">
+            <!-- Blog Post 1 -->
+            <div class="blog-post">
+                <img src="../imgs/rolex.webp" alt="Impact of Technology in Watch Industry">
+                <div class="content">
+                    <h3>Impact Of Technology In Watch Industry</h3>
+                    <p>Let's learn about the positive and negative impact of technology in the watch industry.</p>
+                    <a href="../html/learn-more-1.html" class="learn-more-btn">Learn More</a>
+                </div>
+            </div>
+            <!-- Blog Post 2 -->
+            <div class="blog-post">
+                <img src="../imgs/smart watch.webp" alt="Consumer Trends">
+                <div class="content">
+                    <h3>Consumer Trends</h3>
+                    <p>Explore the latest consumer trends shaping the watch industry.</p>
+                    <a href="../html/learn-more-2.html" class="learn-more-btn">Learn More</a>
+                </div>
+            </div>
+            <!-- Blog Post 3 -->
+            <div class="blog-post">
+                <img src="../imgs/traditional and smart.webp" alt="Technology Advancements">
+                <div class="content">
+                    <h3>Technology Advancements</h3>
+                    <p>Discover innovations in watch design and sales techniques.</p>
+                    <a href="../html/learn-more-3.html" class="learn-more-btn">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Subscribe Section -->
+    <div class="subscribe-section" style="background-color: transparent;">
+        <h2>SUBSCRIBE</h2>
+        <p>Sign up for daily updates</p>
+        <input type="email" placeholder="Enter your email">
+        <button onclick="showAlert()">Subscribe</button>
+    </div>
+
+    <!-- Reply Section -->
+    <section class="reply-section" style="background-color: transparent;">
+        <h2>Leave a Reply</h2>
+        <form onsubmit="showCommentAlert(); return false;">
+            <textarea placeholder="Your comments"></textarea>
+            <input type="text" placeholder="Your name">
+            <input type="email" placeholder="Your email">
+            <button type="submit">Post Comment</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 Watchly.com. Every image present on this site belongs to their rightful owner.<br> If you believe we are infringing on your copyright, please submit a copyright report at watchly@proton.me.</p>
+        
+    </footer>
+       
+
+
+
+ 
+
+        
+
+</body>
+</html>

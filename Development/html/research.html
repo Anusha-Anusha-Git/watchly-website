@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>BlogPage</title>
+    <meta name="author" content="Coursework">
+    <meta name="description" content="HTML document">
+    <meta name="keywords" content="HTML">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000000; /* Full black background */
+            color: #e0e0e0; /* Light text for contrast */
+        }
+
+        a {
+            text-decoration: none;
+            color: #e0e0e0;
+        }
+
+        a:hover {
+            color: #007BFF; /* Blue hover effect */
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #000000; /* Full black */
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .navigationLinks ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 0;
+        }
+
+        .navigationLinks ul li {
+            font-size: 18px;
+        }
+
+        .setLogo {
+            height: 100px;
+            width: 100px;
+            margin-top: 10px;
+        }
+
+        .Buttons {
+            transition: transform 0.3s ease;
+        }
+
+        .Buttons:hover {
+            transform: scale(1.1);
+        }
+
+        /* Research Section Styles */
+        .research-section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .research-overlay {
+            background: #000000; /* Full black */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .research-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .research-item {
+            background: #1a1a1a; /* Slightly lighter black for cards */
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .research-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .research-item h3 {
+            color: #007BFF; /* Blue for headings */
+            margin-bottom: 15px;
+        }
+
+        .research-item p {
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        .research-item ul {
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        .research-item table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .research-item table th,
+        .research-item table td {
+            padding: 10px;
+            border: 1px solid #444;
+        }
+
+        .research-item table th {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        .research-item table td {
+            background-color: #1a1a1a;
+        }
+
+        .research-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .go-to-site-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .go-to-site-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #000000; /* Full black */
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        footer .social-icons {
+            margin-top: 10px;
+        }
+
+        footer .social-icons a {
+            margin: 0 10px;
+        }
+    </style>
+  
+</head>
+<body style="width: 100%; height: 100%;">
+   
+
+    <!--Main container-->
+ 
+       
+    <nav style="position: absolute; margin-top: 100px; margin-left: 50px; ">
+        <ul style="list-style: none; display: flex; gap: 20px; ">
+            <li><span style="font-family: corporateA; text-decoration: none; font-size:20px;"><a href="../index.html">Home</span></a></li>
+            <li><span style="font-family: corporateA; text-decoration: none; font-size:20px;"><a href="product.html">Products</span></a></li>
+            <li><span style="font-family: corporateA; text-decoration: none; font-size:20px;"><a href="blog5.html">Blog</span></a></li>
+            <li><span style="font-family: corporateA; text-decoration: none; font-size:20px;"><a href="about.html">About</span></a></li>
+            <li><span style="font-family: corporateA; text-decoration: none; font-size:20px;"><a href="research.html">Research</span></a></li>
+        </ul>
+    </nav>
+
+    <header style="background-color: rgba(255, 0, 0, 0); position: absolute; height: 270px; width: 270px; margin-left: 700px;">
+        <img class="setLogo" src="../imgs/logo.png" style="height: 100%; width: 100%;">
+    </header>
+
+
+
+<!-- Research Section -->
+    <section class="research-section" style="margin-top: 300px;">
+        <div class="research-overlay">
+            <h2>Research</h2>
+            <div class="research-items">
+                <!-- Analyzing Website Components -->
+                <div class="research-item">
+                    <h3>Analyzing the Website Components</h3>
+                    <p>The website is divided into five parts:</p>
+                    <ul>
+                        <li><strong>Home Page:</strong> Features a slideshow to attract viewers and a quote: <em>"Discover timeless elegance in every tick."</em> The design is visually appealing, with enlarging images for better product visibility.</li>
+                        <li><strong>Products Page:</strong> Includes a video at the top for enhanced engagement. Showcases two collections: <em>Rolex - The Collection</em> and <em>Richard Mille - The Collection.</em></li>
+                        <li><strong>Blog Page:</strong> Provides in-depth knowledge on topics like <em>Impact of Technology in Watch Industry, Consumer Trends,</em> and <em>Technology Advancements.</em></li>
+                        <li><strong>About Page:</strong> Includes an interactive form for feedback and a team overview.</li>
+                        <li><strong>Research Page:</strong> Analyzes and compares the website with other platforms, highlighting unique features.</li>
+                    </ul>
+                </div>
+
+                <!-- Contrast with Other Platforms -->
+                <div class="research-item">
+                    <h3>Contrast with Other E-commerce Platforms</h3>
+                    <table>
+                        <tr>
+                            <th>Watchly</th>
+                            <th>Daraz</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Watchly uses a black and white theme for simplicity. It showcases products elegantly and focuses on Rolex and Richard Mille collections.</p>
+                                <img src="../imgs/4.png" alt="Watchly Screenshot">
+                               
+                            </td>
+                            <td>
+                                <p>Daraz uses vibrant orange for marketing. It offers a wide range of brands and has a more cluttered layout.</p>
+                                <img src="../imgs/7.png" alt="Daraz Screenshot">
+                                <a href="https://www.daraz.com" class="go-to-site-btn" target="_blank">Go to Daraz</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Watchly</th>
+                            <th>Alibaba</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Watchly has a clean design with an add-to-cart button but lacks a "like" feature.</p>
+                                <img src="../imgs/11.png" alt="Watchly Screenshot">
+                                
+                            </td>
+                            <td>
+                                <p>Alibaba has a similar design but includes a "like" feature and lacks an add-to-cart button.</p>
+                                <img src="../imgs/1.png" alt="Alibaba Screenshot">
+                                <a href="https://www.alibaba.com" class="go-to-site-btn" target="_blank">Go to Alibaba</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Watchly</th>
+                            <th>eBay</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Watchly has an elegant design with limited collection pieces. Photos are of high quality.</p>
+                                <img src="../imgs/5.png" alt="Watchly Screenshot">
+                            </td>
+                            <td>
+                                <p>eBay has an elegant design with a wide range of watches, including Rolex. However, the image quality is not as good.</p>
+                                <img src="../imgs/9.png" alt="eBay Screenshot">
+                                <a href="https://www.ebay.com" class="go-to-site-btn" target="_blank">Go to eBay</a>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Watchly</th>
+                            <th>Amazon</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Watchly has a simple and clean design with an add-to-cart button but lacks a price range filter.</p>
+                                <img src="../imgs/8.png" alt="Watchly Screenshot">
+                            </td>
+                            <td>
+                                <p>Amazon has a similar design with a price range filter and an add-to-cart button.</p>
+                                <img src="../imgs/10.png" alt="Amazon Screenshot">
+                                <a href="https://www.amazon.com" class="go-to-site-btn" target="_blank">Go to Amazon</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Highlight Unique Features -->
+                <div class="research-item">
+                    <h3>Highlight Unique Features</h3>
+                    <ul>
+                        <li><strong>User-Friendly:</strong> Simple and intuitive layout.</li>
+                        <li><strong>Innovative Tools:</strong> Use of slideshows and videos.</li>
+                        <li><strong>Simple Purchasing Process:</strong> Easy add-to-cart functionality.</li>
+                        <li><strong>Longer Browsing:</strong> Attractive product presentation.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 Watchly.com. Every image present on this site belongs to their rightful owner. If you believe we are infringing on your copyright, please submit a copyright report at watchly@proton.me.</p>
+        <div class="social-icons">
+            <a href="#fb"><img src="../imgs/fb1.png" alt="Facebook" width="30px" height="30px" class="Buttons"></a>
+            <a href="#twitter"><img src="../imgs/twitter.png" alt="Twitter" width="30px" height="30px" class="Buttons"></a>
+        </div>
+    </footer>
+       
+
+
+
+ 
+
+        
+
+</body>
+</html>

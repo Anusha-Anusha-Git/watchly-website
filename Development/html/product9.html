@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Linking to an external CSS stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+    <meta name="author" content="Coursework">
+    <meta name="description" content="HTML document">
+    <meta name="keywords" content="HTML">
+    <title>Product2</title>
+    <style>
+        /* Custom styling for the specifications section */
+        .specifications {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        /* Removes default list style in specifications list */
+        .specifications ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .specifications li {
+            margin-bottom: 10px;
+        }
+        /* Styling for the reviews section */
+        .review-section {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            font-size: 20px;
+        }
+        /* Styling for each individual review in the review section */
+        .review {
+            margin-top: 10px;
+            border-top: 1px solid grey;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main container that holds the content -->
+    <div class="main">
+        <!-- Navigation links -->
+        <div class="navigationLinks">
+            <ul style="list-style: none; display: flex; gap: 50px; position: absolute;">
+                <li><span style="font-family: corporateA; text-decoration: none; font-size:30px;"><a href="../index.html">Home</span></a></li>
+                <li><span style="font-family: corporateA; text-decoration: none; font-size:30px;"><a href="product.html">Products</span></a></li>
+                <li><span style="font-family: corporateA; text-decoration: none; font-size:30px;"><a href="blog5.html">Blog</span></a></li>
+                <li><span style="font-family: corporateA; text-decoration: none; font-size:30px;"><a href="about.html">About</span></a></li>
+                <li><span style="font-family: corporateA; text-decoration: none; font-size:30px;"><a href="research.html">Research</span></a></li>
+            </ul>
+        </div>
+
+        <!-- Logo for the website -->
+        <img class="setLogo" src="../imgs/logo.png" style="height: 250px; width: 250px;">
+
+        <!-- Main product details section -->
+        <div style="height: 700px; width: 100%; background-color: black; display: flex;">
+            <div style="height:100%; width: 100%; background-color: black;">
+                <!-- Product name section -->
+                <div style="background-color: black; height: 50%; width: 100%; margin-top: 20%;">
+                    <h1 style="font-family:corporateA; font-size: 50px; text-align: center; padding-top: 30%;">RM11-03</h1>
+                </div>
+            </div>
+
+            <!-- Product image section -->
+            <div style="height:100%; width: 100%; background-color: black; position: relative;">
+                <div style="background-color:black; width: 65%; margin-top: 20%; margin-left: 17%;" class="Buttons">
+                    <img width="100%" height="100%" src="../imgs/richardmill.jpg">
+                </div>
+            </div>
+
+            <!-- Product details section (material, description, price, etc.) -->
+            <div style="height:60%; width: 100%; background-color: blue; margin-top: 10%;">
+                <div style="height:20%; width: 100%; background-color: black; text-align: left; padding:auto; font-size: 20px; position: relative;" class="Buttons">
+                    <span style="color: grey;">Materials used</span> : Carbon TPT and Rose Gold
+                </div>
+                <div style="height:20%; width: 100%; background-color: black; text-align: left; padding:auto; font-size: 20px; position: relative; text-align: justify;" class="Buttons">
+                    <span style="color: grey; text-align: center;">Description</span> : The RM 11-03 is equipped with hours, minutes, seconds.
+                </div>
+                <div style="height:20%; width: 100%; background-color: black; text-align: left; padding:auto; font-size: 20px; position: relative;" class="Buttons">
+                    <span style="color: grey;">Price</span> : $7M
+                </div>
+                <div style="height:40%; width: 100%; background-color: black; text-align: left; padding:auto; font-size: 20px; position: relative; display: flex;">
+                    <!-- Contact Us and Buy Now buttons -->
+                    <div style="height:40%; width: 100%; background-color: black; text-align: left; padding:auto; font-size: 20px; position: relative;" class="Buttons">
+                        <a href="about.html"><h2>Contact Us</h2></a>
+                    </div>
+                    <div style="height:40%; width: 100%; background-color: black; text-align: left; padding:auto; font-size: 20px; position: relative;" class="Buttons">
+                        <a href="#buynow"><h2>Buy Now</h2></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Specifications section for the RM11-03 -->
+        <div class="specifications">
+            <h2>Specifications</h2>
+            <ul>
+                <li><strong>Brand Name:</strong> Richard Mille</li>
+                <li><strong>Model:</strong> RM11-03</li>
+                <li><strong>Collection:</strong> RM Collection</li>
+                <li><strong>Brief Intro:</strong> A high-performance timepiece combining cutting-edge technology with luxury.</li>
+                <li><strong>Specs:</strong></li>
+                <ul>
+                    <li><strong>Case:</strong> Carbon TPT and Rose Gold, 44.5mm x 49.94mm</li>
+                    <li><strong>Dial:</strong> Skeletonized with luminescent hands</li>
+                    <li><strong>Crystal:</strong> Sapphire with anti-reflective treatment</li>
+                    <li><strong>Bezel:</strong> Fixed</li>
+                    <li><strong>Movement:</strong> Automatic flyback chronograph</li>
+                    <li><strong>Water Resistance:</strong> 50 meters</li>
+                    <li><strong>Special Features:</strong> Flyback chronograph, annual calendar</li>
+                    <li><strong>Style:</strong> Sports</li>
+                    <li><strong>Gender:</strong> Unisex</li>
+                    <li><strong>Unique Design Elements:</strong> Distinctive tonneau shape, skeletonized dial</li>
+                    <li><strong>Warranty Duration:</strong> 5 years</li>
+                    <li><strong>Description of Packaging:</strong> Comes in a luxurious Richard Mille box with a polishing cloth</li>
+                    <li><strong>Certifications:</strong> N/A</li>
+                    <li><strong>Sustainability Efforts:</strong> Richard Mille is committed to sustainable practices in its manufacturing processes.</li>
+                </ul>
+            </ul>
+        </div>
+
+        <!-- Review section for the RM11-03 watch -->
+        <div class="review-section">
+            <h2>Reviews</h2>
+            <h3>Rating: <span id="rating"></span>/5</h3>
+            <div class="review">"A masterpiece of modern watchmaking, combining luxury with performance."</div>
+            <div class="review">"The use of Carbon TPT and Rose Gold is both innovative and stylish."</div>
+            <div class="review">"An exceptional timepiece that stands out with its unique design!"</div>
+        </div>
+
+        <!-- Footer with copyright and social media links -->
+        <footer style="background-color: black; color: white; font-size: 15px; width: 50%; text-align: justify; margin-top: 50px;">
+            © 2024 Watchly.com. Every image present on this site belongs to their rightful owner. If you believe we are infringing on your copyright, please submit a copyright report at watchly@proton.me.
+            <br>
+            <div style="display: inline-block; margin-top: 30px; margin-left: 325px;">
+                <a href="#fb"><img src="../imgs/fb1.png" width="30px" height="30px" class="Buttons"></a>
+                <a href="#twitter"><img src="../imgs/twitter.png" width="30px" height="30px" class="Buttons"></a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript to generate random rating -->
+    <script>
+        // Generate a random rating between 3 and 5 using Math.trunc
+        const randomRating = Math.trunc(Math.random() * 3) + 3;
+        document.getElementById('rating').textContent = randomRating;
+    </script>
+</body>
+</html>

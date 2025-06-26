@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <title>HomePage</title>
+    <meta name="author" content="Coursework">
+    <meta name="description" content="HTML document">
+    <meta name="keywords" content="HTML">
+    <style>
+        /* Team Leader Card Styling */
+        .team-leader-card {
+            background: #1f1f1f; /* Dark grey background */
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s , box-shadow 0.3s ;
+        }
+
+        .team-leader-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .team-leader-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .team-leader-card h3 {
+            font-size: 24px;
+            margin: 10px 0;
+            color: #e0e0e0; /* Light grey text */
+        }
+
+        .team-leader-card p {
+            font-size: 16px;
+            color: #b0b0b0; /* Grey text */
+            margin: 5px 0;
+        }
+
+        .team-leader-card a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .team-leader-card a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Featured Blog Card Styling */
+        .featured-blog-card {
+            background: #1f1f1f; /* Dark grey background */
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .featured-blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .featured-blog-card img {
+            width: 100%;
+            height: 150px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .featured-blog-card h3 {
+            font-size: 20px;
+            margin: 10px 0;
+            color: #e0e0e0; /* Light grey text */
+        }
+
+        .featured-blog-card p {
+            font-size: 14px;
+            color: #b0b0b0; /* Grey text */
+            margin: 5px 0;
+        }
+
+        .featured-blog-card a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 1px solid #e0e0e0;
+        }
+
+        /* Container for Team Leader and Featured Blog Card */
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px; 
+            margin-top: 50px;
+        }
+
+        /* Mute Button Styling */
+        #muteButton {
+            position: absolute;
+            top: 20px;
+            right: 140px;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        #muteButton:hover {
+            background-color: #e91e63;
+            transform: translateY(-5px);
+        }
+    </style>
+    <script>
+        function changeVid() {
+            var collections = ['imgs/video2.mp4', 'imgs/video3.mp4', 'imgs/video4.mp4', 'imgs/video5.mp4'];
+            var vidchanger1 = document.getElementById("vidchanger");
+            var player1 = document.getElementById("player");
+
+            if (vidchanger1.src.includes('video2.mp4')) {
+                vidchanger1.src = collections[1];
+            } else if (vidchanger1.src.includes('video3.mp4')) {
+                vidchanger1.src = collections[2];
+            } else if (vidchanger1.src.includes('video4.mp4')) {
+                vidchanger1.src = collections[3];
+            } else {
+                vidchanger1.src = collections[0];
+            }
+
+            player1.load();
+        }
+
+        function toggleMute() {
+            var player = document.getElementById("player");
+            var muteButton = document.getElementById("muteButton");
+            player.muted = !player.muted;
+            muteButton.textContent = player.muted ? "Unmute" : "Mute";
+        }
+
+        // Function to update  the current date and time every second
+        function updateDateTime() {
+            var cartIcon = document.getElementById("cartIcon"); //Cart icon is positioned in other pages but we use the same id for it due to same positioning
+            var currentDate = new Date();
+            cartIcon.innerHTML = currentDate.toLocaleString(); // Sets the current date and time
+        }
+
+        // Set an interval to update the date and time every second
+        window.onload = function() {
+            setInterval(updateDateTime, 1000); // 1000ms=1sec, this makes our time dynamic
+        };
+    </script>
+</head>
+<body>
+    <!-- Background video-->
+    <video id="player" class="bg-vid" muted autoplay loop>
+        <source id="vidchanger" src="imgs/video4.mp4" type="video/mp4">
+    </video>
+
+    <!--Main container-->
+    <div class="main">
+        <nav class="navigationLinks">
+            <ul style="list-style: none; display: flex; gap: 20px; position: absolute;">
+                <li><span style="font-family: corporateA; text-decoration: none; font-size:20px;"><a href="home.html">Home</span></a></li>
+                <li><span style="font-family: corporateA; text-decoration: none; font-size:20px;"><a href="html/product.html">Products</span></a></li>
+                <li><span style="font-family: corporateA; text-decoration: none; font-size:20px;"><a href="html/blog5.html">Blog</span></a></li>
+                <li><span style="font-family: corporateA; text-decoration: none; font-size:20px;"><a href="html/about.html">About</span></a></li>
+                <li><span style="font-family: corporateA; text-decoration: none; font-size:20px;"><a href="html/research.html">Research</span></a></li>
+            </ul>
+        </nav>
+
+        <header style="background-color: transparent;">
+            <img class="setLogo" src="imgs/logo.png" style="height: 250px; width: 250px; text-align: center;">
+            <div id="cartIcon" style="position: absolute; right: 0;  margin-top: 750px; color: white; font-size: 20px; background-color: transparent; "></div>
+        </header>
+
+        <div style="background-color: transparent; height: 300px; width: 600px; margin-top: 20%; position:absolute; left: 0;">
+            <p style="font-family: corporateA; font-size:60px; text-align: center;">
+                Choose from the world's best luxurious brands.
+            </p>
+        </div>
+
+        <button onclick="toggleMute()" id="muteButton" style="position: absolute; margin-top: 720px; ">Unmute</button>
+
+        <button onclick="changeVid()" id="Arrow">
+            <img style="height: 100px; width: 100px; position:relative;" src="imgs/arrow1.png">
+        </button>
+
+        <div style="margin-top: 700px; height: 800px; width: 100%; background-color: transparent; color: white;">
+            <p style="text-align: center; font-size: 60px">Discover The Best Watches<br> in every tick</p>
+            <p style="text-align: center; color: grey; font-size: 20px; margin-top: 30px;"><i>Explore from our exquisite collection from luxury brands. These watches have no limits and set no boundries for aesthetics ensuring you standout</i></p>
+
+            <!--Watch Collection Showoff-->
+            <div style="width:100%; margin-top: 70px; position: relative;">
+                <a href="html/product.html#richardmill">
+                    <div style="width:100%; height: 100%; margin-top: 0px; display: flex;" class="Buttons">
+                        <img src="imgs/rmillcollection.jpg" height="100%" width="100%" id="img1">
+                        <div style="background-color: transparent; height: 80px; width: 490px; margin-top:3px; position:absolute; top: 350px; left: 510px; font-family: corporateA; font-size:80px; text-align: center;" id="discover" class="Buttons">
+                            Richard Mille<br>
+                            <span style="font-size: 30px; color: white;">THE COLLECTION</span>
+                        </div>
+                    </div>
+                </a>
+
+                <div style="background-color:black; height:10%; display: block; margin: 70px auto; width: 40%;">
+                    <p style="text-align: center; font-size: 50px">FEATURED WATCHES<br><span style="font-size: 25px;"> </span></p>
+                </div>
+
+                <div style="background-color:black; margin-top: 30px; display: flex; width: 100%; height: 100%;">
+                    <div class="Cards">
+                        <a href="html/product5.html">
+                            <img width="100%%" height="100%" src="imgs/rolex6.webp">
+                        </a>
+                    </div>
+
+                    <div class="Cards">
+                        <a href="html/product6.html">
+                            <img width="100%" height="100%" src="imgs/rolex7.webp">
+                        </a>
+                    </div>
+
+                    <div class="Cards">
+                        <a href="html/product7.html">
+                            <img width="100%%" height="100%" src="imgs/rolex8.webp">
+                        </a>
+                    </div>
+
+                    <div id="Cards">
+                        <a href="html/product8.html">
+                            <img width="100%" height="100%" src="imgs/rolex9.webp">
+                        </a>
+                    </div>
+                </div>
+
+                <!--Descriptions-->
+                <div style="background-color:black; margin-top: 30px; display: flex; width: 100%;">
+                    <div style="background-color: black; flex: 50%; padding: 10px auto; height: 10%; border: none; margin-right: 40px;">
+                        <a href="html/product5.html">
+                            <p style="text-align: center; color: white; font-size: 30px; margin-top: 10px;">Rolex Submariner Date</p>
+                        </a>
+                    </div>
+
+                    <div style="background-color: black; flex: 50%; padding: 10px auto; height: 10%; border: none; margin-right: 40px;">
+                        <a href="html/product6.html">
+                            <p style="text-align: center; color: white; font-size: 30px; margin-top: 10px;">Rolex Day-Date<br> (Everose Gold)</p>
+                        </a>
+                    </div>
+
+                    <div style="background-color: black; flex: 50%; padding: 10px auto; height: 10%; border: none; margin-right: 40px;">
+                        <a href="html/product7.html">
+                            <p style="text-align: center; color: white; font-size: 30px; margin-top: 10px;">Rolex GMT-Master II</p>
+                        </a>
+                    </div>
+
+                    <div style="background-color: black; flex: 50%; padding: 10px auto; height: 10%; border: none; margin-right: 0px;">
+                        <a href="html/product8.html">
+                            <p style="text-align: center; color: white; font-size: 30px; margin-top: 10px;">Rolex Explorer</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!--Blogs-->
+            <div style="background-color:black; margin-top: 90px; display: flex; width: 100%; height: 670px;" class="Buttons">
+                <a href="html/blog5.html">
+                    <img width="900px" height="500px" src="imgs/blog1.jpg">
+                    <p style="text-align: center; font-size:50px; margin-top: 30px;">Discover our blog pages</p>
+                </a>
+            </div>
+
+            <!-- Container for Team Leader and Featured Blog Card -->
+            <div class="card-container">
+                <!-- Featured Blog Card -->
+                <div class="featured-blog-card">
+                    <h3>Impact Of Technology In Watch Industry</h3>
+                    <p>Learn about the positive and negative impact of technology in the watch industry.</p>
+                    <a href="html/learn-more-3.html">Read More</a>
+                </div>
+                 
+                <!-- Featured Blog Card -->
+                  <div class="featured-blog-card">
+                    <h3>Research Section</h3>
+                    <p>Learn about our R&D phase and who we got inspred buy </p>
+                    <a href="html/research.html">Read More</a>
+                </div>
+
+                  <!-- Featured Blog Card -->
+                  <div class="featured-blog-card">
+                    <h3>Get to know about us</h3>
+                    <p>Get full information about our team</p>
+                    <a href="html/about.html">Read More</a>
+                </div>
+
+
+                <!-- Team Leader Card -->
+                <div class="team-leader-card">
+                    <img src="imgs/team-leader.jpg" alt="Team Leader">
+                    <h3>Anusha Shrestha</h3>
+                    <p>Team Leader</p>
+                    <p>anusha.shrestha@gmail.com</p>
+                    <a href="mailto:anusha.shrestha@gmail.com">Contact Me</a>
+                </div>
+            </div>
+
+            <footer style="background-color: black; color: white; font-size: 15px; width: 50%; text-align: justify; margin-top: 50px;">
+                © 2024 Watchly.com. Every image present on this site belongs to their rightful owner. If you believe we are infringing on your copyright, please submit a copyright report at watchly@proton.me.
+                <br>
+                <div style="display: inline-block; margin-top: 30px; margin-left: 325px;">
+                    <a href="#fb"><img src="imgs/fb1.png" width="30px" height="30px" class="Buttons"></a>
+                    <a href="#twitter"><img src="imgs/twitter.png" width="30px" height="30px" class="Buttons"></a>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

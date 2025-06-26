@@ -1,0 +1,273 @@
+/* Enables smooth scrolling behavior for the entire page */
+html {
+    scroll-behavior: smooth;
+    height: 100%; /* Ensures full height */
+    display: flex;
+    flex-direction: column; /* Aligns content in a column layout */
+}
+
+/* Applies to all elements */
+* {
+    margin: 0 auto; /* Centers elements horizontally */
+    padding: 0; /* Removes default padding */
+    box-sizing: border-box; /* Ensures padding and border are included in element size */
+}
+
+/* Styles the main container */
+.container {
+    width: 60%; /* Sets container width */
+    background-color: black; /* Sets background color to black */
+    text-align: center; /* Centers text */
+    margin: auto; /* Centers the container */
+    padding: 10px; /* Adds spacing inside */
+}
+
+/* Styles the secondary container */
+.container2 {
+    width: 50%; /* Sets width */
+    background-color: white; /* White background */
+    margin: auto; /* Centers the container */
+    padding: 10px; /* Adds spacing */
+}
+
+/* Utility class for setting background color */
+.bgcolor {
+    background-color: black;
+}
+
+/* Styles the menu bar */
+.menu {
+    background-color: black;
+    height: 50px; /* Sets menu height */
+}
+
+/* Styles the body */
+body {
+    font-family: Arial, sans-serif; /* Sets font */
+    background-color: black; /* Sets background color */
+    color: white; /* Sets text color */
+}
+
+/* Styles the header */
+header {
+    background-color: black; /* Sets background color */
+    color: white; /* Sets text color */
+    padding: 20px 40px; /* Adds spacing inside the header */
+}
+
+/* Styles the navigation links */
+.nav-links {
+    list-style: none; /* Removes bullet points */
+    display: flex; /* Aligns items horizontally */
+    gap: 15px; /* Adds space between links */
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease; /* Smooth transition effect */
+}
+
+/* Changes navigation link color on hover */
+.nav-links a:hover {
+    color: #ff9800;
+}
+
+/* Positions the footer at the bottom */
+footer {
+    margin-top: auto;
+}
+
+/* Adds a hover effect to buttons */
+.Buttons {
+    transition: all 0.3s;
+}
+
+/* Enlarges buttons on hover */
+.Buttons:hover {
+    transform: scale(1.10);
+}
+
+/* Styles the background video */
+body video.bg-vid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Moves video to the background */
+    width: 100%;
+    height: auto; /* Maintains aspect ratio */
+}
+
+/* Styles the main section */
+body .main {
+    background-color: transparent;
+    width: 90%;
+    position: relative;
+}
+
+/* Styles the navigation links section */
+body .main .navigationLinks {
+    background-color: transparent;
+    opacity: 100%;
+    height: 50px;
+    width: 30%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 110px; /* Positions navigation below a certain point */
+}
+
+/* Styles all links */
+a:link, a:visited, a:active, a:focus {
+    text-decoration: none; /* Removes underline */
+    color: white; /* Sets text color */
+    font-family: corporateA; /* Uses custom font */
+}
+
+/* Changes link color on hover */
+a:hover {
+    color: lightgrey;
+}
+
+/* Styles the "Explore" button */
+a.Explore {
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    font-size: 50px; /* Large font size */
+    position: absolute;
+    margin-top: 50%;
+    left: 140px;
+    font-weight: bold;
+}
+
+/* Changes "Explore" button color on hover */
+a.Explore:hover {
+    color: lightgrey;
+}
+
+/* Styles the logo image */
+body .main img.setLogo {
+    position: relative;
+    margin: auto;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%); /* Centers the logo */
+}
+
+/* Styles for card components */
+.Cards, #Cards {
+    margin-right: 40px;
+    background-color: #1A1A1A; /* Dark grey background */
+    transition: all 0.3s;
+}
+
+/* Enlarges cards slightly on hover */
+.Cards:hover, #Cards:hover {
+    transform: scale(1.1);
+}
+
+/* Adds hover effect to buttons */
+.Buttons {
+    transition: all 0.3s;
+}
+
+/* Enlarges buttons on hover */
+.Buttons:hover {
+    transform: scale(1.10);
+}
+
+/* Adds transition effect to elements with class 'rm' */
+.rm {
+    transition: all 0.3s;
+}
+
+/* Slightly enlarges elements with class 'rm' on hover */
+.rm:hover {
+    transform: scale(1.05);
+}
+
+/* Styles the arrow button */
+#Arrow {
+    position: absolute;
+    top: 700px;
+    right: 0;
+    transition: all 0.3s;
+    border: none;
+    background: none;
+}
+
+/* Enlarges arrow button on hover */
+#Arrow:hover {
+    transform: scale(1.1);
+}
+
+/* Applies a blur effect to images with id 'img1' when hovered */
+#img1:hover {
+    filter: blur(5px);
+}
+
+/* Styles the 'discover' section */
+#discover {
+    color: lightgrey;
+}
+
+/* Changes 'discover' text color and makes it bold on hover */
+#discover:hover {
+    color: white;
+    font-weight: bold;
+}
+
+/* Styles the navigation bar */
+nav {
+    margin-top: 10px; /* Adds space above the nav bar */
+}
+
+/* Styles navigation links */
+nav a {
+    color: white; /* Makes text color white */
+    text-decoration: none; /* Removes underline from links */
+    margin: 0 10px; /* Adds spacing between links */
+    padding: 5px 10px; /* Adds padding inside links */
+    border: 1px solid white; /* Adds border around links */
+    border-radius: 5px; /* Rounds link corners */
+}
+
+/* Changes nav link color on hover */
+nav a:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Styles sections */
+section {
+    padding: 20px; /* Adds padding */
+    margin: 20px; /* Adds space around sections */
+    background-color: #1f1f1f; /* Dark grey background */
+    border-radius: 10px; /* Rounds section corners */
+}
+
+/* Styles the qualification section */
+.qualification {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 225px)); /* Creates a responsive grid */
+    gap: 20px; /* Adds space between grid items */
+}
+
+/* Styles individual cards */
+.card {
+    background-color: #292929;
+    padding: 10px;
+    border-radius: 10px; /* Rounds card corners */
+    text-align: center; /* Centers text */
+}
+
+/* Displays links inside cards as flex items on hover */
+.card a:hover {
+    display: flex;
+}
+
+/* Styles the footer */
+footer {
+    text-align: center; /* Centers text */
+    padding: 10px; /* Adds padding */
+    background-color: #1f1f1f; /* Dark grey background */
+    margin-top: 20px; /* Adds space above footer */
+}

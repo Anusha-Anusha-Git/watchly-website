@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>About Us</title>
+    <meta name="author" content="Bijay Gautam">
+    <meta name="description" content="HTML document">
+    <meta name="keywords" content="HTML">
+
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        color: white;
+    }
+    .main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .navigationLinks {
+        background-color: black;
+        padding: 10px 0;
+    }
+    .navigationLinks ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+    }
+    .navigationLinks li a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: black;
+        box-shadow: 0 2px 4px rgba(255,255,255,0.1);
+    }
+    .setLogo {
+        margin: 0 auto;
+    }
+    .container {
+        background-color: #0D0D0D;
+        text-align: center;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #333;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(255,255,255,0.1);
+    }
+    .container input, .container textarea {
+        width: 80%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #555;
+        border-radius: 4px;
+        background-color: black;
+        color: white;
+    }
+    .container button {
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .team-overview {
+        background-color: black;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        margin: 20px 0;
+        border-radius: 8px;
+    }
+    .team-overview h1, .team-overview h2 {
+        margin: 10px 0;
+    }
+    .team-member {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .team-member a {
+        background-color: #0D0D0D;
+        color: white;
+        width: 200px;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+        text-decoration: none;
+        box-shadow: 0 2px 4px rgba(255,255,255,0.1);
+    }
+    footer {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 8px;
+    }
+    footer div {
+        margin-top: 10px;
+    }
+    footer a img {
+        margin: 0 10px;
+    }
+    </style>
+</head>
+
+<body>
+    <!--Main container-->
+    <img src="../imgs/logo.png" height="200px" width="200px" style="position: absolute; left: 50%; transform: translateX(-50%);">
+
+
+    <nav class="navigationLinks" style="margin-top: 100px; margin-left: 50px; height: 100px;">
+
+        <ul style="list-style: none; display: flex; gap: 20px; position: absolute;">
+            <li><span style="font-family: corporateA; text-decoration: none; font-size:20px;"><a href="../index.html">Home</span></a></li>
+            <li><span style="font-family: corporateA; text-decoration: none; font-size:20px;"><a href="product.html">Products</span></a></li>
+            <li><span style="font-family: corporateA; text-decoration: none; font-size:20px;"><a href="blog5.html">Blog</span></a></li>
+            <li><span style="font-family: corporateA; text-decoration: none; font-size:20px;"><a href="about.html">About</span></a></li>
+            <li><span style="font-family: corporateA; text-decoration: none; font-size:20px;"><a href="research.html">Research</span></a></li>
+        </ul>
+
+    </nav>
+    <div class="main">
+        
+       
+        
+
+        <main style="margin-top: 70px;">
+            <div>
+                <h1 id="color" style="text-align: center;">Get in touch with us.</h1>
+                <form class="container" name="myform" onsubmit="return validate_form()">
+                    <p>First name: <input type="text" name="firstname"></p>
+                    <p>Last name: <input type="text" name="lastname"></p>
+                    <p>Email Address: <input type="email" name="email"></p>
+                    <p>Phone Number: <input type="text" name="number"></p>
+                    <p>Message: <br><textarea name="message" rows="5" placeholder="Type message here"></textarea></p>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </main>
+
+        <div class="team-overview">
+            <h1>Team Overview</h1>
+            <h2 style="margin-bottom: 30px;">Leader</h2>
+            <a href="../html/portfolio1.html">Anusha Shrestha</a>
+
+            <h2 style="margin-top: 30px;">Team Members</h2>
+            <div class="team-member">
+                <a href="../html/portfolio2.html">Utsarga Chaulagain</a>
+                <a href="../html/portfolio3.html">Alisha Maharjan</a>
+                <a href="../html/portfolio4.html">Genius Bista</a>
+                <a href="../html/portfolio5.html">Samsuddin Khan</a>
+            </div>
+        </div>
+
+        <footer>
+            © 2024 Watchly.com. Every image present on this site belongs to their rightful owner. If you believe we are infringing on your copyright, please submit a copyright report at watchly@proton.me.
+            <div>
+                <a href="#fb"><img src="../imgs/fb1.png" width="30px" height="30px" class="Buttons"></a>
+                <a href="#twitter"><img src="../imgs/twitter.png" width="30px" height="30px" class="Buttons"></a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function validate_form() {
+            var firstname = document.forms["myform"]["firstname"].value;
+            var lastname = document.forms['myform']['lastname'].value;
+            var email = document.forms['myform']['email'].value;
+            var number = document.forms['myform']['number'].value;
+            var message = document.forms['myform']['message'].value;
+        
+            if (firstname === "" || lastname === "" || email === "" || number === "") {
+                alert("Please enter your informations!!");
+                return false;
+            }
+        
+            // Basic check for 10-digit phone number
+            if (number.length !== 10) {
+                alert("Please enter a valid 10-digit phone number.");
+                return false;
+            }
+        
+            if (message === "") {
+                alert("Please feel free to reach us out if you have any queries.");
+                return false;
+            }
+        
+            alert("Thank for providing your information and queries.");
+            return true;
+        }
+        </script>
+        
+</body>
+</html>
